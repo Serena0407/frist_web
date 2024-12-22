@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .card {
+            width: 400px;
+            height: 400px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .card-header {
+            padding: 10px;
+            color: #fff;
+            text-align: center;
+        }
+        .blue {
+            background-color: #007bff;
+        }
+        .red {
+            background-color: #dc3545;
+        }
+        .card-body {
+            padding: 15px;
+            text-align: center;
+        }
+        .card-footer {
+            background-color: #f9f9f9;
+            padding: 10px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- One Time Use Reservation Card -->
+        <a href="about.php" class="card">
+            <div class="card-header blue">
+                <h3>One Time Use Reservation</h3>
+                <p>平時預借</p>
+            </div>
+            <div class="card-body">
+                <p><strong>預約使用空間:</strong><br>SL201 SL245 SL246 SL471 SL200-1 SL200-3<br>LM200 LM202</p>
+            </div>
+            <div class="card-footer">
+                平時預借 上學期日期: 2024/11/12 - 12/12 (60天)
+            </div>
+        </a>
+
+        <!-- Semester-long Reservation Card -->
+        <a href="about.php" class="card">
+            <div class="card-header red">
+                <h3>Semester-long Reservation</h3>
+                <p>學期預借</p>
+            </div>
+            <div class="card-body">
+                <p><strong>學期使用空間:</strong><br>SL201 SL245 SL246 SL471 SL200-1 SL200-3<br>LM200 LM202</p>
+            </div>
+            <div class="card-footer">
+                學期預借: 103教室日期: 2024/01/15 - 2024/06/15
+            </div>
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>修改預約｜輔仁大學教室預借系統</title>
+    <link rel="icon" href="http://home.lib.fju.edu.tw/TC/sites/default/files/shield-FJCULIB-FJCU.png" type="image/png">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+
+        .confirm-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .confirm-container h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        h5 {
+            align-items: center;
+        }
+        .hero-placeholder {
+            height: 240px; /* 可調整佔位符的高度 */
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .navbar {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+            <a href="about.html" class="navbar-brand p-0">
+                <h1 class="text-primary m-0"><b>輔仁大學教室預借系統</b></h1>
+                <!-- <img src="img/logo.png" alt="Logo"> -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="classroomDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            教室預約系統
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="classroomDropdown" style="max-height: 300px; overflow-y: auto;">
+                            <li><a class="dropdown-item" href="about.html">羅耀拉大樓[SL]</a></li>
+                            <li><a class="dropdown-item" href="about1.html">利瑪竇大樓[LM]</a></li>
+                        </ul>
+                    </div>
+                    <a href="service.html" class="nav-item nav-link active">我的預約</a>
+                    <a title="我的帳號" href="my_account.html">
+                        <img src="https://cdn-icons-png.flaticon.com/128/3033/3033143.png" style="width: 48px; height: 48px; margin-top: 22px;" alt="Instagram Icon">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>     
+    <!-- Navbar End -->
+
+    <div class="hero-placeholder"></div>
+
+    <!-- Confirm Reservation Container Start -->
+    <div class="container confirm-container">
+        <h3>確認預約時間/教室</h3>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th scope="row">姓名</th>
+                    <td>xxx</td> <!-- 可以用後端資料填入 -->
+                </tr>
+                <tr>
+                    <th scope="row">教室</th>
+                    <td>LM200</td> <!-- 可以用後端資料填入 -->
+                </tr>
+                <tr>
+                    <th scope="row">預約日期</th>
+                    <td>2024-11-13</td> <!-- 可以用後端資料填入 -->
+                </tr>
+                <tr>
+                    <th scope="row">預約時間</th>
+                    <td>15:40-17:30</td> <!-- 可以用後端資料填入 -->
+                </tr>
+            </tbody>
+        </table>
+        <div class="btn-container">
+            <button id="cancelBtn" class="btn btn-secondary">取消修改</button>
+            <button id="editBtn" class="btn btn-primary">前往修改</button>
+        </div>
+    </div>
+    <!-- Confirm Reservation Container End -->
+
+    <script>
+        document.getElementById("cancelBtn").onclick = function () {
+            window.location.href = "service.html";
+        };
+
+        document.getElementById("editBtn").onclick = function () {
+            window.location.href = "edit_reservation.html"; // 替換為修改頁面連結
+        };
+    </script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
